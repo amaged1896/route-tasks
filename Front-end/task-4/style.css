@@ -1,0 +1,736 @@
+* {
+    font-family: "Alegreya Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Clear for float  */
+
+.clear-fix {
+    clear: both;
+}
+
+/* Clear for float  */
+
+/* Header section */
+
+.header {
+    background-image: url(img/slider/slider-01.jpg);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    height: 100vh;
+    color: #eee;
+}
+
+.container-1 h4::after {
+    content: ' |';
+    animation-name: typing;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes typing {
+    0% {
+        content: " |";
+    }
+
+    3% {
+        content: " D|";
+    }
+
+    5% {
+        content: " De|";
+    }
+
+    10% {
+        content: " Dev|";
+    }
+
+    15% {
+        content: " Deve|";
+    }
+
+    18% {
+        content: " Devel|";
+    }
+
+    20% {
+        content: " Develo|";
+    }
+
+    25% {
+        content: " Develop|";
+    }
+
+    28% {
+        content: " Develope|";
+    }
+
+    30% {
+        content: " Developer|";
+    }
+
+    35% {
+        content: " Develope|";
+    }
+
+    40% {
+        content: " Develop|";
+    }
+
+    45% {
+        content: " Develo|";
+    }
+
+    50% {
+        content: " Devel|";
+    }
+
+    55% {
+        content: " Deve|";
+    }
+
+    60% {
+        content: " Dev|";
+    }
+
+    64% {
+        content: " De|";
+    }
+
+    66% {
+        content: " |";
+    }
+
+    68% {
+        content: " D|";
+    }
+
+    70% {
+        content: " De|";
+    }
+
+    72% {
+        content: " Des|";
+    }
+
+    75% {
+        content: " Desi|";
+    }
+
+    78% {
+        content: " Desig|";
+    }
+
+    80% {
+        content: " Design|";
+    }
+
+    82% {
+        content: " Designe|";
+    }
+
+    84% {
+        content: " Designer|";
+    }
+
+    88% {
+        content: " Designe|";
+    }
+
+    90% {
+        content: " Design|";
+    }
+
+    92% {
+        content: " Desig|";
+    }
+
+    94% {
+        content: " Desi|";
+    }
+
+    96% {
+        content: " Des|";
+    }
+
+    98% {
+        content: " De|";
+    }
+
+    99% {
+        content: " D|";
+    }
+
+    100% {
+        content: " |";
+    }
+}
+
+.container-1 {
+    padding-top: 18%;
+}
+
+.header p {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.header h1 {
+    font-size: 70px;
+    color: #ff305b;
+    text-transform: uppercase;
+}
+
+.header .container-1 h4 {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.black {
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/* Header section */
+
+
+/* Nav section */
+
+.nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 20px 8%;
+    z-index: 10000;
+}
+
+.nav .logo {
+    float: left;
+    width: 10%;
+}
+
+.nav .logo li a {
+    color: #ff305b;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 18px 0;
+}
+
+.nav .links {
+    float: right;
+    width: 45%;
+}
+
+.nav li {
+    list-style-type: none;
+}
+
+.nav .links a {
+    text-decoration: none;
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 10px;
+}
+
+.nav .red a {
+    color: #ff305b;
+}
+
+.links li a:hover {
+    color: #ff305b;
+    transition-duration: 1s;
+}
+
+/* Nav section */
+
+/* about section */
+.about-area {
+    margin-top: 40px;
+    width: 70%;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.profile-photo {
+
+    float: left;
+    width: 48%;
+
+}
+
+.profile-photo img {
+    width: 100%;
+}
+
+.my-img {
+    position: relative;
+    margin-left: auto;
+    border-radius: 5px;
+    width: 75%;
+    text-align: center;
+
+}
+
+.img-caption {
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+}
+
+.img-caption i {
+    color: #eee;
+}
+
+.img-caption i:hover {
+    color: #ff305b;
+}
+
+.over-flow {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.over-flow:hover .img-caption {
+    transition: 1s;
+    overflow: visible;
+    top: 0;
+}
+
+.img-caption ul {
+    width: 140px;
+    height: 30px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-caption ul li {
+    list-style-type: none;
+    float: left;
+    padding: 10px;
+}
+
+
+
+.my-img::before {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    top: -25px;
+    left: -25px;
+    border: 10px solid #555555;
+    border-radius: 5px;
+    z-index: -10;
+}
+
+.profile-desc {
+    float: right;
+    width: 48%;
+}
+
+
+.profile-desc h1 {
+    color: #333333;
+    border-left: 5px solid #ff305b;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.profile-desc .content p {
+    line-height: 1.8;
+    padding: 15px 0;
+    border-bottom: 1px dashed #555555;
+}
+
+.profile-about span {
+    color: #333333;
+    font-weight: 500;
+}
+
+.profile-about ul {
+    padding: 15px 0;
+}
+
+
+.profile-about li {
+    float: left;
+    width: 50%;
+    padding: 5px 0;
+    list-style-type: none;
+    color: #555555;
+    font-weight: 400;
+}
+
+.profile-about a {
+    text-decoration: none;
+    color: #555555;
+}
+
+.profile-about button {
+    background-color: #ff305b;
+    color: #ffffff;
+    padding: 10px 24px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+.profile-about button i {
+    padding-left: 10px;
+}
+
+.profile-about button:hover {
+    background-color: orangered;
+}
+
+/* about section */
+
+
+/* services section */
+
+.hr-30 {
+    margin: 3px auto !important;
+    width: 6%;
+    height: 1.5px !important;
+    background-color: red;
+    border: none !important;
+}
+
+.hr-60 {
+    margin: 3px auto !important;
+    width: 12%;
+    height: 1.5px !important;
+    background-color: red;
+    border: none !important;
+}
+
+
+
+.services-row {
+    width: 100%;
+    padding: 70px 0;
+    background-color: #f1f1f1;
+}
+
+.our-services {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
+
+.our-services h1 {
+    padding-bottom: 10px;
+}
+
+.our-services i {
+    color: #ff305b;
+    font-size: 26px;
+    padding-bottom: 15px;
+}
+
+.our-services .single-service:hover i {
+    transform: scale(1.3);
+    background-color: #ffffff;
+    transition-duration: .5s;
+}
+
+.single-service {
+    float: left;
+    padding: 40px 40px;
+    line-height: 1.6;
+    color: #555555;
+    width: 25%;
+}
+
+.single-service:hover {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 2px black;
+    z-index: 150;
+}
+
+.single-service h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Portfolio */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.our-portfolio {
+    padding-bottom: 50px;
+}
+
+.our-portfolio .row {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.our-portfolio h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    padding-top: 10px;
+}
+
+.our-portfolio .row button {
+    float: left;
+    width: 20%;
+    border: none;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: auto;
+}
+
+.photos img {
+    width: 30%;
+    float: left;
+    margin: 1.5%;
+}
+
+/* client */
+
+.client-fb {
+    padding: 40px;
+}
+
+.client-fb h1 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+}
+
+.client {
+    background-image: linear-gradient(320deg, #eee 85%, #dc3545 15%);
+    border: 1px solid gray;
+    width: 60%;
+    margin: 40px auto;
+    padding: 30px 0;
+}
+
+.client img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.client .content {
+    padding: 30px 0;
+    float: right;
+    width: 80%;
+}
+
+/* our blog */
+.our-blog {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+}
+
+.our-blog .container h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 30px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.single-blog {
+    background-color: #fff;
+    width: 30%;
+    float: left;
+    margin: 1.5%;
+}
+
+.single-blog h5 {
+    color: #555555;
+    font-size: 16px;
+}
+
+.single-blog h3 {
+    color: #333333;
+    padding: 10px 0;
+}
+
+.single-blog img {
+    width: 100%;
+}
+
+/* Contact Us */
+
+.inputs-row {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+
+
+.inputs-row input {
+    display: inline-block;
+    height: 35px;
+    margin: 10px auto;
+}
+
+.inputs-row .subject,
+.inputs-row textarea {
+    width: 100%;
+}
+
+.inputs-row button {
+    padding: 10px;
+    background-color: #ff305b;
+    margin: 10px 0;
+}
+
+.inputs-row button:hover {
+    background-color: orangered;
+}
+
+.left-side,
+.right-side {
+    width: 47%;
+}
+
+.left-side {
+    float: left;
+}
+
+.right-side {
+    float: right;
+}
+
+.contact-us {
+    padding: 50px 0;
+}
+
+.contact-us .container {
+    width: 60%;
+}
+
+.contact-us h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    padding: 5px 0;
+}
+
+
+/* Footer */
+
+.footer {
+    padding: 50px 0;
+    background-color: #333333;
+    text-align: center;
+}
+
+.footer ul {
+    width: 13%;
+    margin: 30px auto;
+}
+
+.icons-list {
+    width: 70%;
+    margin: auto;
+}
+
+.footer ul li {
+    float: left;
+    padding: 0 10px;
+    list-style-type: none;
+}
+
+.footer ul li i {
+    color: #eee;
+    cursor: pointer;
+}
+
+.footer ul li i:hover {
+    color: #ff305b;
+}
+
+.copy-right a {
+    color: #ff305b;
+    text-decoration: none;
+    padding: 0 2px;
+}
+
+.copy-right a:hover {
+    text-decoration: underline;
+}
+
+.copy-right {
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+@media screen and (min-width:0px) and (max-width:512px) {
+
+    .profile-photo,
+    .profile-desc {
+        width: 100%
+    }
+
+    .single-service {
+        width: 100%;
+    }
+
+    .our-portfolio .photos img {
+        width: 100%;
+        margin: auto;
+    }
+
+    .single-blog {
+        width: 100%;
+    }
+
+    .inputs-row .left-side,
+    .inputs-row .right-side {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:512px) and (max-width:768px) {
+    .single-service {
+        width: 50%;
+    }
+
+    .our-portfolio .photos img {
+        width: 48%;
+        margin: 1%;
+    }
+
+    .single-blog {
+        width: 100%;
+    }
+
+    .inputs-row .left-side,
+    .inputs-row .right-side {
+        width: 100%;
+    }
+}
