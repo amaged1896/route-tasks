@@ -1,0 +1,334 @@
+* {
+    font-family: "Alegreya Sans";
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+.clear-fix {
+    clear: both;
+}
+
+/* Nav section */
+
+.nav {
+    background-color: transparent;
+    padding: 20px 5%;
+}
+
+.nav-img {
+    float: left;
+    width: 40%;
+}
+
+.nav-img img {
+    width: 40%;
+    float: left;
+}
+
+.nav-links {
+    float: right;
+    width: 35%;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+}
+
+.nav-links {
+    padding: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+/* Nav section */
+
+
+/* header section */
+
+.header {
+    background-image: url(images/drew-coffman-1872.jpg);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    height: 100vh;
+    color: #eee;
+}
+
+.header .pad {
+    font-size: 24px;
+    padding-top: 10%;
+}
+
+.header .desc {
+    font-size: 24px;
+}
+
+.header h1 {
+    font-weight: 300;
+    font-size: 100px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.header .btn {
+    padding-top: 50px;
+    margin-top: 30px;
+    padding: 20px 40px;
+    color: #eee;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.header .btn1 {
+    background-color: #8e7754;
+    border: none;
+    border: 2px solid #8e7754;
+}
+
+.header .btn2 {
+    border: 2px solid #eee;
+    background-color: transparent;
+}
+
+/* header section */
+
+
+/* we are section */
+.we-are,
+.location {
+    padding: 50px 5% 20px;
+}
+
+.we-are .photo {
+    width: 48%;
+    float: left;
+}
+
+.photo img {
+    width: 80%;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.we-are .content {
+    margin-top: 50px;
+    width: 48%;
+    text-align: left;
+    float: right;
+}
+
+.we-are .content h2 {
+    font-size: 24px;
+    color: #303030;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.we-are .content p {
+    margin-top: 10px;
+    line-height: 30px;
+    color: #686868;
+    /* padding-right: 25%; */
+}
+
+.content ul {
+    margin-top: 30px;
+    line-height: 30px;
+    list-style-type: none;
+}
+
+.content ul li {
+    margin-top: 20px;
+}
+
+.content ul li i {
+    text-align: center;
+    background-color: #8e7754;
+    color: #fff;
+}
+
+/*             Edit !!!!                  */
+.content li i {
+    color: #686868;
+    margin-right: 20px;
+    padding: 5px;
+    width: 25px;
+    line-height: 1.9;
+    height: 25px;
+    border: 1px solid #686868;
+    border-radius: 50%;
+}
+
+/*             Edit !!!!                  */
+
+/* Location section */
+
+.we-are .left {
+    margin-left: 50px;
+    float: left;
+}
+
+.we-are .right {
+    float: right;
+}
+
+.two {
+    background-color: #f8f8f8;
+}
+
+
+/* Location section */
+
+/* Our Baking */
+
+/* 
+.baking {
+    margin: 0 50px;
+} */
+
+
+.baking .content {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-left: 60px;
+    padding: 20px;
+}
+
+.baking .content img {
+    width: 100%;
+}
+
+.baking-des {
+    text-align: center;
+
+}
+
+.baking-des h2 {
+    margin-top: 50px;
+    padding-top: 50px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #303030;
+
+}
+
+.baking-des p {
+    margin-top: 5px;
+    padding-bottom: 50px;
+    color: #686868;
+
+}
+
+.baking .content h3 {
+    margin-top: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #303030;
+
+}
+
+
+.baking .content p {
+    margin-top: 10px;
+    line-height: 30px;
+    color: #686868;
+}
+
+
+.left li i {
+    text-align: center;
+    background-color: #8e7754;
+    color: #fff;
+}
+
+
+
+
+
+/* About  */
+
+.bottom {
+    background-color: #353330;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.bottom p {
+    margin-top: 15px;
+    color: #686868;
+}
+
+.bottom ul {
+    width: 13%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.bottom ul li {
+    float: left;
+    list-style-type: none;
+}
+
+.bottom ul img {
+    width: 35px;
+    height: 35px;
+    margin-left: 14px;
+}
+
+/* Top */
+
+.top {
+    background-color: #403d38;
+    padding: 50px 7%;
+    color: #969696;
+
+}
+
+.top p {
+    line-height: 1.8;
+    padding-bottom: 30px;
+}
+
+.top hr {
+    border: none;
+    height: 1px;
+    background-color: #686868;
+    width: 280px;
+}
+
+.about-content {
+    float: left;
+    width: 23%;
+    margin: 1%;
+}
+
+.about-content a {
+    text-decoration: none;
+    color: #969696;
+}
+
+.top .about-content h3 {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.about-content ul li {
+    list-style-type: none;
+    line-height: 2.5;
+}
+
+
+
+
+
+/* About  */
