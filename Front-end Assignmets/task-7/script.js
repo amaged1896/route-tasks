@@ -152,6 +152,14 @@ var userNum2 = +prompt("enter your userNum ?");
   console.log(Math.pow(userNum1, userNum2));
 }
 
+var userNum1 = +prompt("enter your userNum ?");
+var userNum2 = +prompt("enter your userNum ?");
+var result = 1 ;
+
+for(var i = 0 ; i < power ; i++) {
+  result *= num;
+}
+console.log(result)
 */
 
 /*
