@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="w-75 py-5 m-auto">
+      <h2 class="fs-3 fw-bold text-secondary">Bookmarker</h2>
+      <hr />
+      <div class="w-100 text-center m-auto bg-light p-3">
+        <h2 class="fs-3 fw-bold text-black p-3">
+          Bookmark your favorite sites
+        </h2>
+        <h3 class="p-3 fs-5">Site Name</h3>
+        <input
+          class="form-control p-2 m-2 w-75 h-50 m-auto required"
+          type="text"
+          id="siteNameInput"
+          placeholder="Bookmark Name"
+        />
+        <h3 class="p-3 fs-5">Site URL</h3>
+        <input
+          class="form-control p-2 m-2 w-75 h-50 m-auto"
+          type="text"
+          id="urlInput"
+          placeholder="website URL"
+        />
+        <button
+          onclick="addWebSite();"
+          class="btn btn-primary text-center m-3 shadow-lg"
+        >
+          Submit
+        </button>
+      </div>
+      <br />
+      <div class="w-100 text-center m-auto bg-light p-3">
+        <table class="table text-center">
+          <thead>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Delete</th>
+            <th>Visit</th>
+          </thead>
+          <tbody class="text-center m-auto" id="tableBody"></tbody>
+        </table>
+      </div>
+      <hr />
+      <footer class="fw-bold text-secondary">© 2019 Bookmarker Inc.</footer>
+    </div>
+    <script src="js/script.js"></script>
+    <a href=""></a>
+  </body>
+</html>
