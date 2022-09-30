@@ -14,4 +14,8 @@ Route Academy Assignments
 
 # 6- DevFolio Landing Page "Bootstrap"
 
-# 7- Javascript Assignment Num-1
+# 7- Javascript Assignment-1
+
+# 8- Javascript Assignment-2 Quote of the Day "Quotes Generator"
+
+# 9- Javascript Assignment-3 Bookmarker 
