@@ -1,3 +1,5 @@
+// Write a program that allow to user enter number from prompt then print it ?
+
 /*
 1- Write a program that allow to user enter number then print it
 // first example

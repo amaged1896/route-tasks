@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #26353f;
+    height: 100vh;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.group {
+    box-shadow: rgb(0, 0, 0) -5px 2px 54px -9px;
+    color: #eee;
+}
+
+.group h1 {
+    color: #17a2b8;
+}
+
+.group input {
+    color: #eee !important;
+    background-color: transparent !important;
+}
+
+.group a {
+    text-decoration: none;
+    color: #eee;
+}
+
+.group a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    border-color: #80bdff;
+}
+
+/* welcome */
+
+.navbar-brand {
+    text-decoration: none !important;
+}
+
+.b-c {
+    border-color: #ffc107;
+}
