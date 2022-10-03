@@ -1,17 +1,19 @@
-# Route-Tasks
+# **Route Assignments**
 
-Route Academy Assignments
+[Table](https://github.com/amaged1896/route-tasks/tree/main/Front-end%20Assignmets/task-1) 
 
-# 1- Table
+[Form](https://github.com/amaged1896/route-tasks/tree/main/Front-end%20Assignmets/task-2)
 
-# 2- Form
+[Family Bakery Landing page](https://github.com/amaged1896/route-tasks/tree/main/Front-end%20Assignmets/task-3)
 
-# 3- Family Bakery Landing page
+[Fokir Landing Page](https://github.com/amaged1896/route-tasks/tree/main/Front-end%20Assignmets/task-4)
 
-# 4- Fokir Landing Page
+[Simone Landing Page](https://github.com/amaged1896/route-tasks/tree/main/Front-end%20Assignmets/Task-5)
 
-# 5- Simone Landing Page
+[DevFolio Landing Page "Bootstrap"](https://github.com/amaged1896/route-tasks/tree/main/Front-end%20Assignmets/task-6)
 
-# 6- DevFolio Landing Page "Bootstrap"
+[Javascript Assignment-1](https://github.com/amaged1896/route-tasks/tree/main/Front-end%20Assignmets/task-7)
 
-# 7- Javascript Assignment Num-1
+[Javascript Assignment-2 Quote of the Day "Quotes Generator"](https://github.com/amaged1896/route-tasks/tree/main/Front-end%20Assignmets/task-8)
+
+[Javascript Assignment-3 Bookmarker](https://github.com/amaged1896/route-tasks/tree/main/Front-end%20Assignmets/task-9)
