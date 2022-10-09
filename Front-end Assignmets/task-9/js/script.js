@@ -24,7 +24,6 @@ function displayWebSites() {
     sites += `<tr>
           <td>${webSiteInfo[i].siteName}</td>
           <td>${webSiteInfo[i].siteUrl}</td>
-          
           <td><button onclick="deleteSite(${i})" class="btn btn-sm btn-danger">Delete</button></td>
           <td><a href="${webSiteInfo[i].siteUrl}" class="btn btn-sm btn-primary" target="_blank">visit</a></td>
           </tr>`;
