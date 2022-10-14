@@ -7,6 +7,12 @@
     text-decoration-style: none;
 }
 
+a,
+p {
+    text-decoration: none;
+    color: rgb(191, 193, 200) !important;
+}
+
 body {
     background-color: #1e202b !important;
 }
@@ -41,9 +47,8 @@ nav {
 
 .nav-item,
 a {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400 !important;
-    color: #eee !important;
 }
 
 nav ul li {
@@ -274,3 +279,137 @@ form input[type="submit"] {
 }
 
 /* footer  */
+
+
+
+/* contact page */
+
+
+
+.breadcrumb {
+    background: #262936;
+    border-radius: 40px;
+    padding: 20px 30px;
+    font-size: 13px;
+    font-size: 0.9285714286em;
+}
+
+.breadcrumb a:after {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 7px;
+    background: url(../img/arrow-gray.png) no-repeat;
+    margin: 0 10px;
+}
+
+.breadcrumb a {
+    color: #bfc1c8;
+}
+
+.breadcrumb span {
+    color: white;
+}
+
+.fullwidth-block {
+    padding: 70px 0px;
+}
+
+.contact-details {
+    background: rgb(38, 41, 54);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map {
+    height: 220px;
+}
+
+.contact-details .map {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contact-details .contact-info {
+    padding: 20px;
+}
+
+.contact-details address {
+    padding-left: 30px;
+    position: relative;
+}
+
+.contact-details address img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.contact-details .contact-info {
+    padding: 20px;
+}
+
+.contact-details a {
+    margin-right: 20px;
+    color: rgb(191, 193, 200);
+}
+
+.contact-details a img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.fullwidth-block .section-title {
+    font-size: 36px;
+    font-weight: 300;
+    color: white;
+}
+
+
+.contact-form input:not([type="submit"]) {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    color: white;
+    border: 2px solid #393c48;
+    background: transparent;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: white;
+    border: 2px solid #393c48;
+    background: transparent;
+    border-radius: 30px;
+}
+
+.contact-form .text-right {
+    text-align: right;
+}
+
+/* footer */
+.site-footer .social-links a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #1e202b;
+    color: #009ad8;
+    text-align: center;
+    line-height: -5;
+    transition: 0.3s ease;
+    font-size: 20px;
+}
+
+.site-footer .social-links a:hover {
+    background: #009ad8;
+    color: white;
+}
+
+/* footer */
+/* contact page */
