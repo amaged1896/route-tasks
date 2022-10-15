@@ -81,7 +81,7 @@ nav ul li a:hover {
 
 .content {
     background-image: url(../img/banner.png);
-    height: 27vh;
+    height: 50vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,6 +94,7 @@ nav ul li a:hover {
     color: #eee !important;
     padding: 20px 50px !important;
     border: none;
+    margin-top: 50px;
 }
 
 .form-control:focus {
@@ -103,7 +104,7 @@ nav ul li a:hover {
 
 .search-bar {
     position: relative;
-    margin-top: 50px;
+    /* margin-bottom: 20px; */
 }
 
 .search-btn {
@@ -187,7 +188,7 @@ nav ul li a:hover {
 
 .table-weather {
     position: relative;
-    top: -180px;
+    top: -150px;
 }
 
 .degree {
