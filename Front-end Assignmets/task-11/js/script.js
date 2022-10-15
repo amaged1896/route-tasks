@@ -11,3 +11,18 @@ function displayWeather(apiDegree) {
       currentDegree + " C";
   });
 }
+
+async function getDataFromApi() {
+  let getData = await fetch(
+    "https://api.weatherapi.com/v1/forecast.json?key=bcc8bbd5f9374cc8975185520221410&q=cairo&days=3&aqi=no&alerts=no"
+  );
+  let resData = await getData.json();
+  console.log(resData.forecast.forecastday);
+  const items = resData.forecast.forecastday;
+  displayWeather(items);
+}
+try {
+  getDataFromApi();
+} catch (err) {
+  console.log(err);
+}
