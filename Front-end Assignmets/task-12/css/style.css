@@ -4,8 +4,9 @@
     padding: 0;
 }
 
+/* head section */
 .header {
-    height: 90vh;
+    height: 50vh;
     background-image: url(../img/events-heavenly-header.jpg);
     background-position: center center;
     background-size: cover;
@@ -33,3 +34,32 @@
     text-align: center;
     padding-top: 10px;
 }
+
+/* head section */
+
+/* extended section */
+.extended {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.item {
+    width: 35%;
+}
+
+.item h4 {
+    padding: 15px 0;
+    background-color: rgba(214, 46, 51, 0.6);
+    cursor: pointer;
+    color: #eee;
+}
+
+.item p {
+    padding: 10px;
+    background-color: #ccc;
+}
+
+/* extended section */
