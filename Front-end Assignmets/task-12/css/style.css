@@ -39,7 +39,7 @@
 
 /* extended section */
 .extended {
-    padding-top: 50px;
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,3 +63,31 @@
 }
 
 /* extended section */
+
+
+/* count-down section */
+
+.count-down {
+    margin-top: 50px;
+    width: 100%;
+    height: 20vh;
+    background-image: url(../img/invitation-2508607__340.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.box {
+    font-size: 24px;
+    margin: 0 50px;
+    padding: 50px;
+    border: 2px solid #eee;
+    color: #fff;
+}
