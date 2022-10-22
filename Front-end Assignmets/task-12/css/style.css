@@ -26,6 +26,7 @@
     color: #eee;
 }
 
+
 .content>h1 {
     font-size: 5rem;
 }
@@ -145,3 +146,43 @@ textarea:focus {
 }
 
 /* form section */
+
+/* side-bar section*/
+.side-bar {
+    position: fixed;
+    width: 300px;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    z-index: 999999;
+    background-color: #414658;
+}
+
+.sidebar-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    left: 30px;
+}
+
+.sidebar-container a {
+    font-size: 26px;
+    color: #fff;
+    padding: 20px 8px 20px 0 !important;
+    text-decoration: none;
+}
+
+
+.side-bar span {
+    position: relative;
+    left: 270px;
+    top: -50px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+/* side-bar section*/
