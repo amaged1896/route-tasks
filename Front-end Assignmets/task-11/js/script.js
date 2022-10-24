@@ -87,3 +87,16 @@ function displayNextDayWeather() {
       responseData.forecast.forecastday[i + 1].day.condition.text;
   }
 }
+
+// realtime search
+searchLocation.addEventListener("keyup", function () {
+  currentCity = searchLocation.value;
+  getWeatherData(currentCity);
+});
+
+// search by button
+searchBtn.addEventListener("click", function () {
+  currentCity = searchLocation.value;
+  getWeatherData(currentCity);
+});
+
