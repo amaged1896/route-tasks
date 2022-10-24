@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- bootstrap stylesheet -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="https://routeweather.netlify.app/images/logo.png">
     <title>Weather App</title>
     <!-- external stylesheet -->
     <link rel="stylesheet" href="css/style.css">
@@ -61,60 +62,73 @@
     <!-- content section -->
     <section class="content">
         <div class="container">
-            <div id="searchLocation" class="search-bar">
-                <input class="form-control" placeholder="Find your location" type="text">
-                <button class="search-btn">Find</button>
+            <div class="search-bar">
+                <input id="searchLocation" class="form-control" placeholder="Find your location" type="text">
+                <button id="searchBtn" class="search-btn">Find</button>
             </div>
         </div>
     </section>
     <div id="tableWeather" class="table-weather">
         <div class="container">
             <div class="weather-container">
+                <!-- Today -->
                 <div class="today forecast">
-                    <div class="forecast-header" id="today">
-                        <div class="day">Wednesday</div>
-                        <div class=" date">12October</div>
-                    </div> <!-- .forecast-header -->
+                    <div class="forecast-header">
+                        <div id="today"></div>
+                        <div id="todayDate">12October</div>
+                    </div>
                     <div class="forecast-content" id="current">
-                        <div class="location">Giza</div>
+                        <div id="location" class="location">Giza</div>
                         <div class="degree">
-                            <div class="num">0<sup>o</sup>C</div>
+                            <div id="todayDegree" class="num">0<sup>o</sup>C</div>
                             <div class="forecast-icon">
-                                <img src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt="" width="90">
+                                <img id="todayIcon" width="90">
                             </div>
                         </div>
-                        <div class="custom">Partly cloudy</div>
-                        <span><img src="img/icon-umberella.png" alt="">20%</span>
-                        <span><img src="img/icon-wind.png" alt="">18km/h</span>
-                        <span><img src="img/icon-compass.png" alt="">East</span>
+                        <p id="description"></p>
+                        <div class="details">
+                            <i class="fas fa-umbrella"></i>
+                            <span id="humidity">%</span><span>%</span>
+
+                            <i class="fas fa-wind pl-3 pr-1"></i>
+                            <span id="wind"></span><span>km/h</span>
+
+                            <i class="fas fa-compass pl-3 pr-1"></i>
+                            <span id="compass"></span>
+                        </div>
                     </div>
                 </div>
+                <!-- Today -->
+                <!-- Second Day -->
                 <div class="forecast second ">
                     <div class="forecast-header">
-                        <div class="day">Thursday</div>
-                    </div> <!-- .forecast-header -->
+                        <div class="day nextDay">Thursday</div>
+                    </div>
                     <div class="forecast-content">
-                        <div class="forecast-icon">
-                            <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="" width="48">
+                        <div>
+                            <img class="nextDay-icon" width="90">
                         </div>
-                        <div class="degree">0<sup>o</sup>C</div>
-                        <p class="small">0<sup>o</sup></p>
-                        <div class="custom">Sunny</div>
+                        <div class="maxDegree">0<sup>o</sup>C</div>
+                        <p class="minDegree">0<sup>o</sup></p>
+                        <p class="nextDayDescription"></p>
                     </div>
                 </div>
+                <!-- Second Day -->
+                <!-- Third Day -->
                 <div class="forecast second">
                     <div class="forecast-header">
-                        <div class="day">Friday</div>
-                    </div> <!-- .forecast-header -->
+                        <div class="day nextDay">Friday</div>
+                    </div>
                     <div class="forecast-content">
                         <div class="forecast-icon">
-                            <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="" width="48">
+                            <img class="nextDay-icon" width="90">
                         </div>
-                        <div class="degree">0<sup>o</sup>C</div>
-                        <p class="small">0<sup>o</sup></p>
-                        <div class="custom">Sunny</div>
+                        <div class="maxDegree">0<sup>o</sup>C</div>
+                        <p class="minDegree">0<sup>o</sup></p>
+                        <p class="nextDayDescription"></p>
                     </div>
                 </div>
+                <!-- Third Day -->
             </div>
         </div>
     </div>

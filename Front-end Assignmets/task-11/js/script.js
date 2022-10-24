@@ -1,28 +1,55 @@
-let searchLocation = document.getElementById("searchLocation");
+// First Card Variables
+let searchLocation = document.getElementById("searchLocation"),
+  today = document.getElementById("today"),
+  todayDate = document.getElementById("todayDate"),
+  cityLocation = document.getElementById("location"),
+  todayDegree = document.getElementById("todayDegree"),
+  todayIcon = document.getElementById("todayIcon"),
+  description = document.getElementById("description"),
+  humidity = document.getElementById("humidity"),
+  wind = document.getElementById("wind"),
+  compass = document.getElementById("compass");
 
-function displayWeather(apiDegree) {
-  const d = new Date();
-  let currentHour = d.getHours();
-
-  apiDegree.forEach((item, index) => {
-    console.log(item);
-    const currentDegree = item.hour[currentHour].temp_c;
-    document.getElementsByClassName("degree")[index].innerHTML =
-      currentDegree + " C";
-  });
-}
-
-async function getDataFromApi() {
-  let getData = await fetch(
-    "https://api.weatherapi.com/v1/forecast.json?key=bcc8bbd5f9374cc8975185520221410&q=cairo&days=3&aqi=no&alerts=no"
+// Next Days Variables
+let nextDay = document.getElementsByClassName("nextDay"),
+  nextDayIcon = document.getElementsByClassName("nextDay-icon"),
+  maxDegree = document.getElementsByClassName("maxDegree"),
+  minDegree = document.getElementsByClassName("minDegree"),
+  nextDayDescription = document.getElementsByClassName("nextDayDescription"),
+  currentCity = "Cairo",
+  apiResponse,
+  responseData,
+  monthName = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
+  days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+// get weather data
+async function getWeatherData(currentCity = "cairo") {
+  apiResponse = await fetch(
+    `https://api.weatherapi.com/v1/forecast.json?key=bcc8bbd5f9374cc8975185520221410&q=${currentCity}&days=3&aqi=no&alerts=no`
   );
-  let resData = await getData.json();
-  console.log(resData.forecast.forecastday);
-  const items = resData.forecast.forecastday;
-  displayWeather(items);
+  responseData = await apiResponse.json();
+  // console.log(responseData);
+  displayTodayWeather();
+  displayNextDayWeather();
 }
-try {
-  getDataFromApi();
-} catch (err) {
-  console.log(err);
-}
+getWeatherData();
