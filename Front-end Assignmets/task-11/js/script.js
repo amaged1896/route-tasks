@@ -53,3 +53,19 @@ async function getWeatherData(currentCity = "cairo") {
   displayNextDayWeather();
 }
 getWeatherData();
+
+// display weather today
+function displayTodayWeather() {
+  let date = new Date();
+  // console.log(date);
+  today.innerHTML = days[date.getDay()];
+  todayDate.innerHTML = `${date.getDate()} ${monthName[date.getMonth()]}`;
+  // console.log(responseData.location);
+  cityLocation.innerHTML = responseData.location.name;
+  todayDegree.innerHTML = responseData.current.temp_c;
+  todayIcon.setAttribute("src", `https:${responseData.current.condition.icon}`);
+  description.innerHTML = responseData.current.condition.text;
+  humidity.innerHTML = responseData.current.humidity;
+  wind.innerHTML = responseData.current.wind_kph;
+  compass.innerHTML = responseData.current.wind_dir;
+}
