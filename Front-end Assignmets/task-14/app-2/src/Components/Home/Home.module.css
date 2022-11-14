@@ -1,0 +1,15 @@
+.test {
+    background-color: #1abc9c;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.line {
+    width: 130px;
+    height: 4px;
+    background-color: white;
+    border-radius: 1rem;
+}

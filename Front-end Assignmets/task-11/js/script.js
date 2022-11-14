@@ -45,10 +45,10 @@ let nextDay = document.getElementsByClassName("nextDay"),
 // get weather data
 async function getWeatherData(currentCity = "cairo") {
   apiResponse = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=bcc8bbd5f9374cc8975185520221410&q=${currentCity}&days=3&aqi=no&alerts=no`
+    `https://api.weatherapi.com/v1/forecast.json?key=046ca875b57d43b2b2e160031220911&q=${currentCity}&days=3&aqi=no&alerts=no`
   );
   responseData = await apiResponse.json();
-  // console.log(responseData);
+  console.log(responseData);
   displayTodayWeather();
   displayNextDayWeather();
 }
@@ -99,4 +99,3 @@ searchBtn.addEventListener("click", function () {
   currentCity = searchLocation.value;
   getWeatherData(currentCity);
 });
-
