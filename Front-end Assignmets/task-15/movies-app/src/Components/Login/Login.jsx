@@ -13,10 +13,11 @@ export default function Login() {
     password: '',
   });
 
-  async function sendRegisterDataToApi() {
+  async function sendLoginDataToApi() {
     let { data } = await axios.post(`https://route-egypt-api.herokuapp.com/signin`, user);
     console.log(data);
     if (data.message === 'success') {
+      localStorage.setItem('userToken', data.token);
       navigate('/');
     } else {
       setError(data.message);
@@ -27,26 +28,24 @@ export default function Login() {
     let myUser = { ...user };
     myUser[e.target.name] = e.target.value;
     setUser(myUser);
+    console.log(myUser);
   }
 
-  function submitRegisterForm(e) {
+  function submitLoginForm(e) {
     e.preventDefault();
-    validationRegisterForm();
-    let validation = validationRegisterForm();
+    validationLoginForm();
+    let validation = validationLoginForm();
     if (validation.error) {
       setErrorList(validation.error.details);
       console.log(errorList);
     } else {
-      sendRegisterDataToApi();
+      sendLoginDataToApi();
     }
   }
 
 
-  function validationRegisterForm() {
+  function validationLoginForm() {
     let scheme = Joi.object({
-      first_name: Joi.string().min(3).max(10).required(),
-      last_name: Joi.string().min(3).max(10).required(),
-      age: Joi.number().min(18).max(80).required(),
       email: Joi.string()
         .email({ tlds: { allow: ['com', 'net'] } })
         .required(),
@@ -55,16 +54,17 @@ export default function Login() {
     return scheme.validate(user, { abortEarly: false });
   }
 
-
-
-
-
-
-
-
-
   return (
     <>
+
+      {errorList.map((err, index) => {
+        if (err.context.label === 'password') {
+          return (<div key={index} className='alert alert-danger my-2'>Password Invalid</div>);
+        } else {
+          return (errorList.length > 0 ? <div key={index} className="alert alert-danger my-2">{err.message}</div> : '');
+        }
+      })}
+
       <div className="container">
         <div className="row mt-5 form-bg">
           <div className="col-md-6 p-0">
@@ -74,20 +74,21 @@ export default function Login() {
           </div>
           <div className="col-md-6 p-0">
 
-            <form className='p-4 flex-column text-center justify-content-center px-5'>
+            <form onSubmit={submitLoginForm} className='p-4 flex-column text-center justify-content-center px-5'>
               <div className='d-flex align-items-center justify-content-center'>
                 <div className="img flex-column text-center">
                   <img className='w-25' src="../../../img/logo.png" alt="" />
                   <h1 className='h4'>Log in to GameOver</h1>
                 </div>
               </div>
-              <input type="email" placeholder='Email' className="form-control my-input my-3 mx-auto" name="email" id="email" />
-              <input type="password" placeholder='Password' className="form-control my-input my-3 mx-auto  " name="password" id="password" />
-              <Link><button className="btn text-white btn-outline-dark w-100 py-2">Login</button></Link>
+              {error.length > 0 ? (<div className="alert alert-danger my-2">{error}</div>) : ''}
+              <input onChange={getUserData} type="email" placeholder='Email' className="form-control my-input my-3 mx-auto" name="email" id="email" />
+              <input onChange={getUserData} type="password" placeholder='Password' className="form-control my-input my-3 mx-auto  " name="password" id="password" />
+              <button type='submit' className="btn text-white btn-outline-dark w-100 py-2">Login</button>
               <hr className='margin-border w-100' />
             </form>
             <div className='d-flex justify-content-center align-items-center flex-column'>
-              <span >Not a member yet ?<Link to="/register" className='a text-primary'> Create Account<i className='fas fa-chevron-right small'></i></Link></span>
+              <span >Not a member yet ?<Link to="/Login" className='a text-primary'> Create Account<i className='fas fa-chevron-right small'></i></Link></span>
             </div>
           </div>
         </div>
