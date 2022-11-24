@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Joi } from 'joi';
 
 export default function Register() {
 
@@ -17,6 +18,19 @@ export default function Register() {
     myUser[e.target.name] = e.target.value;
     setUser(myUser);
     console.log(myUser);
+  }
+
+
+
+  function validationRegisterForm() {
+    let scheme = Joi.object({
+      first_name: Joi.string().alphanum().min(3).max(10).required(),
+      last_name: Joi.string().alphanum().min(3).max(10).required(),
+      email: Joi.string().email({ tlds: { allow: ['com', 'net'] } }).required(),
+      password: Joi.string().pattern(/^[A-Za-z]{5,20}[!@#$%^&*()_+]{0,10}[0-9]{0,6}$/),
+      age: Joi.number().min(18).max(80).required(),
+    });
+    return scheme.validate(user, { abortEarly: false });
   }
 
   return (
