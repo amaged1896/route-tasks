@@ -1,7 +1,68 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Joi from 'joi';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 export default function Login() {
+  let navigate = useNavigate();
+  const [errorList, setErrorList] = useState([]);
+  const [error, setError] = useState('');
+  const [user, setUser] = useState({
+    email: '',
+    password: '',
+  });
+
+  async function sendRegisterDataToApi() {
+    let { data } = await axios.post(`https://route-egypt-api.herokuapp.com/signin`, user);
+    console.log(data);
+    if (data.message === 'success') {
+      navigate('/');
+    } else {
+      setError(data.message);
+    }
+  }
+
+  function getUserData(e) {
+    let myUser = { ...user };
+    myUser[e.target.name] = e.target.value;
+    setUser(myUser);
+  }
+
+  function submitRegisterForm(e) {
+    e.preventDefault();
+    validationRegisterForm();
+    let validation = validationRegisterForm();
+    if (validation.error) {
+      setErrorList(validation.error.details);
+      console.log(errorList);
+    } else {
+      sendRegisterDataToApi();
+    }
+  }
+
+
+  function validationRegisterForm() {
+    let scheme = Joi.object({
+      first_name: Joi.string().min(3).max(10).required(),
+      last_name: Joi.string().min(3).max(10).required(),
+      age: Joi.number().min(18).max(80).required(),
+      email: Joi.string()
+        .email({ tlds: { allow: ['com', 'net'] } })
+        .required(),
+      password: Joi.string().pattern(/^[A-Z][a-z]{3,6}/),
+    });
+    return scheme.validate(user, { abortEarly: false });
+  }
+
+
+
+
+
+
+
+
+
   return (
     <>
       <div className="container">
