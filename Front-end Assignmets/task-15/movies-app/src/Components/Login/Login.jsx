@@ -88,7 +88,7 @@ export default function Login({ saveUserData }) {
               <hr className='margin-border w-100' />
             </form>
             <div className='d-flex justify-content-center align-items-center flex-column'>
-              <span >Not a member yet ?<Link to="/Login" className='a text-primary'> Create Account<i className='fas fa-chevron-right small'></i></Link></span>
+              <span >Not a member yet ?<Link to="/register" className='a text-primary'> Create Account<i className='fas fa-chevron-right small'></i></Link></span>
             </div>
           </div>
         </div>

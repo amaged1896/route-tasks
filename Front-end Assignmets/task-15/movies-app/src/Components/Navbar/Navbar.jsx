@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar({ userData, logOut }) {
+
   return (
     <nav className=" navbar nav navbar-expand-lg bg-light">
       <div className="container">
@@ -10,7 +11,8 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
+
+          {userData ? <ul className="navbar-nav">
             <li className="nav-item">
               <Link className=" a nav-link" aria-current="page" to="">Home</Link>
             </li>
@@ -55,13 +57,15 @@ export default function Navbar() {
                 <li><Link className="dropdown-item" to="categories/battle-royale">battle-royale</Link></li>
               </ul>
             </li>
-          </ul>
+          </ul> : ''}
+
         </div>
-        <ul className='d-flex m-0 align-items-center'>
-          <li className='list-unstyled pe-2'><Link className='btn btn-outline-danger' to="register">Register</Link></li>
+        {userData ? <button onClick={logOut} className='btn btn-outline-info pe-2'>LogOut</button> : <ul className='d-flex m-0 align-items-center'>
           <li className='list-unstyled pe-2'><Link className='btn btn-outline-danger' to="login">Login</Link></li>
-          <span className='btn btn-outline-info pe-2'>LogOut</span>
-        </ul>
+          <li className='list-unstyled pe-2'><Link className='btn btn-outline-danger' to="register">Register</Link></li>
+        </ul>}
+
+
       </div>
     </nav>
   );

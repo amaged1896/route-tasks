@@ -35,8 +35,6 @@ function App() {
     }
   }, []);
 
-
-
   const [userData, setUserData] = useState(null);
 
   function saveUserData() {
@@ -47,7 +45,7 @@ function App() {
   }
   let routers = createBrowserRouter([
     {
-      path: '/', element: <Layout saveUserData={saveUserData} userData={userData} />, errorElement: <ErrorPage />, children: [
+      path: '/', element: <Layout setUserData={setUserData} userData={userData} />, errorElement: <ErrorPage />, children: [
         { index: true, element: <Home /> },
         { path: 'all', element: <All /> },
         { path: 'platforms/pc', element: <Pc /> },
@@ -67,7 +65,7 @@ function App() {
         { path: 'categories/action', element: <Action /> },
         { path: 'categories/flight', element: <Flight /> },
         { path: 'categories/battle-royale', element: <Battle /> },
-        { path: 'login', element: <Login /> },
+        { path: 'login', element: <Login saveUserData={saveUserData} /> },
         { path: 'register', element: <Register /> },
         { path: '*', element: <ErrorPage /> }
       ]
