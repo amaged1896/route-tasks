@@ -23,13 +23,31 @@ import Action from './Components/Categories/Action/Action';
 import Flight from './Components/Categories/Flight/Flight';
 import Battle from './Components/Categories/Battle/Battle';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
+import { useEffect, useState } from 'react';
+import jwtDecode from 'jwt-decode';
 
 
 function App() {
 
+  useEffect(() => {
+    if (localStorage.getItem('userToken') !== null) {
+      saveUserData();
+    }
+  }, []);
+
+
+
+  const [userData, setUserData] = useState(null);
+
+  function saveUserData() {
+    let encodedToken = localStorage.getItem('userToken');
+    let decodedToken = jwtDecode(encodedToken);
+    console.log(decodedToken);
+    setUserData(decodedToken);
+  }
   let routers = createBrowserRouter([
     {
-      path: '/', element: <Layout />, errorElement: <ErrorPage />, children: [
+      path: '/', element: <Layout saveUserData={saveUserData} userData={userData} />, errorElement: <ErrorPage />, children: [
         { index: true, element: <Home /> },
         { path: 'all', element: <All /> },
         { path: 'platforms/pc', element: <Pc /> },
@@ -49,7 +67,6 @@ function App() {
         { path: 'categories/action', element: <Action /> },
         { path: 'categories/flight', element: <Flight /> },
         { path: 'categories/battle-royale', element: <Battle /> },
-
         { path: 'login', element: <Login /> },
         { path: 'register', element: <Register /> },
         { path: '*', element: <ErrorPage /> }
@@ -58,9 +75,7 @@ function App() {
   ]);
 
   return (<>
-
     <RouterProvider router={routers} />
-
   </>
   );
 }

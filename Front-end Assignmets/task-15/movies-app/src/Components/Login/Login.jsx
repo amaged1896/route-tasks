@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 
-export default function Login() {
+export default function Login({ saveUserData }) {
   let navigate = useNavigate();
   const [errorList, setErrorList] = useState([]);
   const [error, setError] = useState('');
@@ -19,6 +19,7 @@ export default function Login() {
     if (data.message === 'success') {
       localStorage.setItem('userToken', data.token);
       navigate('/');
+      saveUserData();
     } else {
       setError(data.message);
     }
@@ -28,7 +29,6 @@ export default function Login() {
     let myUser = { ...user };
     myUser[e.target.name] = e.target.value;
     setUser(myUser);
-    console.log(myUser);
   }
 
   function submitLoginForm(e) {
