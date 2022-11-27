@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 export default function Home() {
 
   const [allGames, setAllGames] = useState([]);
-
   async function getAllGames() {
     let response = await axios.get('https://free-to-play-games-database.p.rapidapi.com/api/games',
       {
@@ -15,10 +14,8 @@ export default function Home() {
           'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
         }
       });
-
     const list = response.data.slice(0, 3);
     setAllGames(list);
-    console.log(list);
   }
 
   useEffect(() => {
