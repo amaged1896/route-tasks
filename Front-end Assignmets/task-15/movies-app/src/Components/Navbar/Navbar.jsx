@@ -6,7 +6,7 @@ export default function Navbar({ userData, logOut }) {
   return (
     <nav className=" navbar nav navbar-expand-lg bg-light">
       <div className="container">
-        <Link className="navbar-brand w-25 text-white" to=""> <img className='w-25' src="../../../img/logo.png" alt="" />Game Over</Link>
+        <Link className="navbar-brand w-25 text-white" to="home"> <img className='w-25' src="../../../img/logo.png" alt="" />Game Over</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -14,7 +14,7 @@ export default function Navbar({ userData, logOut }) {
 
           {userData ? <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className=" a nav-link" aria-current="page" to="">Home</Link>
+              <Link className=" a nav-link" aria-current="page" to="home">Home</Link>
             </li>
             <li className="nav-item">
               <Link className=" a text-muted nav-link" to="all">All</Link>
@@ -60,7 +60,7 @@ export default function Navbar({ userData, logOut }) {
           </ul> : ''}
 
         </div>
-        {userData ? <button onClick={logOut} className='btn btn-outline-info pe-2'>LogOut</button> : <ul className='d-flex m-0 align-items-center'>
+        {userData ? <button onClick={logOut} className='btn btn-outline-info pe-2'>Logout</button> : <ul className='d-flex m-0 align-items-center'>
           <li className='list-unstyled pe-2'><Link className='btn btn-outline-danger' to="login">Login</Link></li>
           <li className='list-unstyled pe-2'><Link className='btn btn-outline-danger' to="register">Register</Link></li>
         </ul>}
@@ -70,3 +70,7 @@ export default function Navbar({ userData, logOut }) {
     </nav>
   );
 }
+
+
+
+

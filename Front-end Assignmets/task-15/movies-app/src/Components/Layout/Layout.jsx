@@ -1,7 +1,6 @@
 import React from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
-import Footer from './../Footer/Footer';
 
 export default function Layout({ userData, setUserData }) {
 
@@ -17,7 +16,6 @@ export default function Layout({ userData, setUserData }) {
     <>
       <Navbar logOut={logOut} userData={userData} />
       <Outlet></Outlet>
-      <Footer />
     </>
   );
 }

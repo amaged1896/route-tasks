@@ -45,7 +45,8 @@ let nextDay = document.getElementsByClassName("nextDay"),
 // get weather data
 async function getWeatherData(currentCity = "cairo") {
   apiResponse = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=046ca875b57d43b2b2e160031220911&q=${currentCity}&days=3&aqi=no&alerts=no`
+    // `https://api.weatherapi.com/v1/forecast.json?key=046ca875b57d43b2b2e160031220911&q=${currentCity}&days=3&aqi=no&alerts=no`
+    `https://api.weatherapi.com/v1/forecast.json?key=463ef8ae695e40e885c153154222711&q=${currentCity}&days=3&aqi=no&alerts=no`
   );
   responseData = await apiResponse.json();
   console.log(responseData);

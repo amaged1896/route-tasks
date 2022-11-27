@@ -40,13 +40,12 @@ function App() {
   function saveUserData() {
     let encodedToken = localStorage.getItem('userToken');
     let decodedToken = jwtDecode(encodedToken);
-    console.log(decodedToken);
     setUserData(decodedToken);
   }
   let routers = createBrowserRouter([
     {
       path: '/', element: <Layout setUserData={setUserData} userData={userData} />, errorElement: <ErrorPage />, children: [
-        { index: true, element: <Home /> },
+        { path: 'home', element: <Home /> },
         { path: 'all', element: <All /> },
         { path: 'platforms/pc', element: <Pc /> },
         { path: 'platforms/browser', element: <Browser /> },

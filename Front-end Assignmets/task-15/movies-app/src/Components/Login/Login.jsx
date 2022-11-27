@@ -18,7 +18,7 @@ export default function Login({ saveUserData }) {
     console.log(data);
     if (data.message === 'success') {
       localStorage.setItem('userToken', data.token);
-      navigate('/');
+      navigate('/home');
       saveUserData();
     } else {
       setError(data.message);
