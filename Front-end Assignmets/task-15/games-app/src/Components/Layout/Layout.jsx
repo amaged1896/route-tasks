@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 
-export default function Layout({ userData, setUserData }) {
+export default function Layout({ platforms, userData, setUserData }) {
 
   let navigate = useNavigate();
 
@@ -14,7 +14,7 @@ export default function Layout({ userData, setUserData }) {
 
   return (
     <>
-      <Navbar logOut={logOut} userData={userData} />
+      <Navbar platforms={platforms} logOut={logOut} userData={userData} />
       <Outlet></Outlet>
     </>
   );

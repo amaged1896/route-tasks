@@ -1,9 +1,10 @@
 import React from 'react';
 
 export default function GameItem({ allGames }) {
+
     return (
         <>
-            {allGames.map((game, key) => (
+            {allGames.map((game, key) =>
                 <div className="col-md-4 game-scale shadow" key={key} >
                     <div className="game bg-game">
                         <div className="img">
@@ -15,7 +16,11 @@ export default function GameItem({ allGames }) {
                         </div>
                     </div>
                 </div>
-            ))}
+            )}
+
+
+            <h2>ahmed</h2>
         </>
     );
 }
+

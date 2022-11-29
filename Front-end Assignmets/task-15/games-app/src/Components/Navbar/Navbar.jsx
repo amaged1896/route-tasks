@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Navbar({ userData, logOut }) {
+export default function Navbar({ platforms, userData, logOut }) {
 
   return (
     <nav className=" navbar nav navbar-expand-lg bg-light">
@@ -20,12 +20,12 @@ export default function Navbar({ userData, logOut }) {
               <Link className=" a text-muted nav-link" to="all">All</Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className=" a text-muted nav-link dropdown-toggle" to="platform" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Link className=" a text-muted nav-link dropdown-toggle" to="platforms" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Platforms
               </Link>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to="platforms/pc">pc</Link></li>
-                <li><Link className="dropdown-item" to="platforms/browser">browser</Link></li>
+                <li><Link className="dropdown-item" to={/platforms/ + platforms.pc}>pc</Link></li>
+                <li><Link className="dropdown-item" to={/platforms/ + platforms.browser}>browser</Link></li>
               </ul>
             </li>
             <li className="nav-item dropdown">

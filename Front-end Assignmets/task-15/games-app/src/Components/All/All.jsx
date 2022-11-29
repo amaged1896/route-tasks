@@ -16,13 +16,12 @@ export default function All() {
       });
     const list = response.data.slice(0, 40);
     setAllGames(list);
-    console.log(list);
+    // console.log(list);
   }
 
 
   useEffect(() => {
     displayAllGames();
-
   }, []);
 
 
