@@ -4,7 +4,7 @@ export default function GameItem({ allGames }) {
 
     return (
         <>
-            {allGames.map((game, key) =>
+            {allGames.slice(0, 20).map((game, key) =>
                 <div className="col-md-4 game-scale shadow" key={key} >
                     <div className="game bg-game">
                         <div className="img">
@@ -17,9 +17,6 @@ export default function GameItem({ allGames }) {
                     </div>
                 </div>
             )}
-
-
-            <h2>ahmed</h2>
         </>
     );
 }

@@ -12,7 +12,7 @@ export default function Navbar({ platforms, userData, logOut }) {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
 
-          {userData ? <ul className="navbar-nav">
+          <ul className="navbar-nav">
             <li className="nav-item">
               <Link className=" a nav-link" aria-current="page" to="home">Home</Link>
             </li>
@@ -57,7 +57,7 @@ export default function Navbar({ platforms, userData, logOut }) {
                 <li><Link className="dropdown-item" to="categories/battle-royale">battle-royale</Link></li>
               </ul>
             </li>
-          </ul> : ''}
+          </ul> 
 
         </div>
         {userData ? <button onClick={logOut} className='btn btn-outline-info pe-2'>Logout</button> : <ul className='d-flex m-0 align-items-center'>

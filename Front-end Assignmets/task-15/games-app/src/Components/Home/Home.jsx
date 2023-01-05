@@ -16,7 +16,7 @@ export default function Home() {
       });
     const list = response.data.slice(0, 3);
     setAllGames(list);
-    console.log(response);
+    // console.log(response);
   }
 
   useEffect(() => {

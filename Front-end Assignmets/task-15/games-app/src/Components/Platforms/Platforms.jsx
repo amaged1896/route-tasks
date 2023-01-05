@@ -1,31 +1,35 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { itemContext } from './../ItemStore/ItemStore';
+import { useContext } from 'react';
+
 
 export default function Platforms() {
+    let { getPlatform } = useContext(itemContext);
 
-    let params = useParams();
-    console.log(params);
-    const [getPlatform, setgetPlatform] = useState([]);
-    async function getGamesByPlatform() {
-        let response = await axios.get(`https://free-to-play-games-database.p.rapidapi.com/api/games`,
-            {
-                headers: {
-                    'X-RapidAPI-Key':
-                        'b52128808dmsh5826403ec30ac21p1b9548jsnfca5769e0b68',
-                    'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-                }, params: {
-                    platform: params.platform
-                }
-            });
-        const list = response.data;
-        console.log(list);
-        setgetPlatform(list);
+    // let params = useParams();
+    // console.log(params);
+    // const [getPlatform, setgetPlatform] = useState([]);
+    // async function getGamesByPlatform() {
+    //     let response = await axios.get(`https://free-to-play-games-database.p.rapidapi.com/api/games`,
+    //         {
+    //             headers: {
+    //                 'X-RapidAPI-Key':
+    //                     'b52128808dmsh5826403ec30ac21p1b9548jsnfca5769e0b68',
+    //                 'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+    //             }, params: {
+    //                 platform: params.platform
+    //             }
+    //         });
+    //     const list = response.data;
+    //     console.log(list);
+    //     setgetPlatform(list);
 
-    }
-    useEffect(() => {
-        getGamesByPlatform();
-    }, []);
+    // }
+    // useEffect(() => {
+    //     getGamesByPlatform();
+    // }, []);
 
 
     return (
@@ -48,7 +52,6 @@ export default function Platforms() {
                         )}
                     </div>
                 </div>
-
             </section>
         </>
     );

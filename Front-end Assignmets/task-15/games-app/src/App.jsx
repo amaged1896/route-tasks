@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 import jwtDecode from 'jwt-decode';
 import Platforms from './Components/Platforms/Platforms';
 import Categories from './Components/Categories/Categories';
-
+import ItemContextProvider from './Components/ItemStore/ItemStore';
 
 
 function App() {
@@ -49,7 +49,9 @@ function App() {
   ]);
 
   return (<>
-    <RouterProvider router={routers} />
+    <ItemContextProvider>
+      <RouterProvider router={routers} />
+    </ItemContextProvider>
   </>
   );
 }
