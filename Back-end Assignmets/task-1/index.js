@@ -28,11 +28,6 @@
 // }
 // console.log(sortNumbers(x));
 // Solution
-// function descendingOrder(num) {
-// 	return num.toString().split('').sort().reverse().join('');
-// }
-
-// console.log(descendingOrder(-10));
 
 // another Solution
 
